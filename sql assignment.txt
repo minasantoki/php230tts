@@ -1,0 +1,164 @@
+                                               Task-1
+
+
+          1) Get First_Name from employee table using alias name “Employee Name”.
+
+
+            ALTER TABLE employee CHANGE FIRST_NAME  Employee_name  varchar(255);
+
+
+
+
+         2) Get FIRST_NAME, Joining year, Joining Month and Joining Date from employee table.
+
+           SELECT Employee_name,JOINIG_DATE FROM employee
+
+
+
+         3) Get all employee details from the employee table order by First Name Ascending And Salary des  cending?
+
+            SELECT Employee_name,SALARY FROM employee  ORDER BY Employee_name ASC,SALARY DESC;
+
+
+
+        4) Get employee details from employee table whose first name contains „o‟
+
+             SELECT*FROM employee WHERE Employee_name like'o%';
+
+
+
+        5) Get employee details from employee table whose joining month is “January”.
+
+            SELECT*FROM employee WHERE JOINIG_DATE like'JANUARY%';
+
+
+
+        6) Get department, total salary with respect to a department from employee table Order By total salary descending
+
+           SELECT SALARY FROM employee ORDER BY SALARY DESC;
+
+
+
+       7) Get department wise maximum salary from employee table order by salary ascending?
+
+           SELECT SALARY FROM employee ORDER BY SALARY asc;
+
+
+
+
+      8) Select first_name, incentive amount from employee and incentives table for those Employees who have incentives and incentive amount greater than 3000
+
+          SELECT * FROM `incentives` WHERE INCENTIVE_AMT >3000;
+
+
+
+
+ 
+      9) Select 2nd Highest salary from employee table.
+
+          SELECT max(salary)from employee WHERE salary<(SELECT max(SALARY)from employee)
+
+
+
+
+      10) Select first_name, incentive amount from employee and incentives table for all Employees who got incentives using left join.
+
+          SELECT employee.*, FIRST_NAME, incentive_amt from employee left join incentives on employee.FIRST_NAME=incentives.INCENTIVE_AMT;
+
+
+
+
+      11) Create View OF Employee table in which store first name, last name and salary only.
+
+          SELECT FIRST_NAME, LAST_NAME, SALARY FROM employee;
+
+
+
+     12) Create Procedure to find out department wise highest salary.
+
+	  Select max(salary),department FROM employee GROUP BY DEPARTMENT;
+
+
+
+
+     13) Create after Insert trigger on Employee table which insert records in view table.
+
+
+
+
+
+	
+
+
+
+                                Task-2
+
+
+          1)All orders for more than $1000.
+
+             SELECT * FROM customerorder WHERE AMT >1000;
+
+
+
+          2)Names and cities of all salespeople in London with commission above 0.10.
+ 
+             SELECT sname,city FROM `sales_person`WHERE CITY='london' and _comm>0.10;
+
+
+
+          3)All salespeople either in Barcelona or in London.
+ 
+             SELECT sname,city FROM `sales_person` WHERE CITY IN('barcelona','london');
+
+
+
+
+          4)All salespeople with commission between 0.10 and 0.12. (Boundary values should be excluded).
+
+            SELECT _comm FROM sales_person WHERE _comm BETWEEN '0.10'and'0.12';
+
+
+
+
+          5)All customers with NULL values in city column.
+
+             SELECT city FROM `sales_person` WHERE city=null;
+
+
+
+ 
+          6)All orders taken on Oct 3Rd and Oct 4th 1994.
+
+             SELECT ods FROM `customerorder` WHERE ods in('1994-10-03','1994-10-04');
+
+
+
+          7)All customers serviced by peel or Motika.
+
+             SELECT sname FROM `sales_person` WHERE sname in('peel','motika');
+
+
+
+          8)All customers whose names begin with a letter from A to B
+
+             SELECT cname FROM customer WHERE cname like'a%' or'b%'
+
+
+
+           9)ll customers excluding those with rating <= 100 unless they are located in Rome.
+
+               SELECT city,RATING FROM `customer` WHERE city='rome' and rating<100;
+
+
+ 
+           10)All orders except those with 0 or NULL value in amt field.
+
+                 SELECT amt FROM `customerorder` WHERE '0'
+
+
+
+          11) Count the number of salespeople currently listing orders in the order table.
+
+                SELECT* FROM `employee` WHERE JOINING_DATE IN('2013_02_01');
+
+                  SELECT * FROM `customerorder` WHERE ods in ('1994-10-06');
