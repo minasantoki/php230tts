@@ -1,0 +1,198 @@
+                                    
+                                oops
+
+
+
+1)What Is Object Oriented Programming?
+ans.
+  ->OOPs stands for Object-Oriented Programming.
+  ->Procedural programming is about writing procedures or functions that perform operations on the data, while object-oriented programming is about creating objects that contain both data and functions.
+
+2)What Are Properties Of Object Oriented Systems? 
+ans.
+   ->classes
+   ->objects
+   ->encapsulation 
+   ->inheritance
+   ->abstraction
+   ->polymorphism.
+
+3)What Is Difference Between Class And Interface? 
+ans.
+  class:
+  ->A class is a template for objects, and an object is an instance of class.
+   ->A class is defined by using the class keyword, followed by the name of the class and a pair of curly braces ({}). All its properties and methods go inside the braces
+Interfaces:
+   ->Interfaces allow you to specify what methods a class should implement.
+   ->Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism".
+   ->Interfaces are declared with the interface keyword
+
+4) What Is Overloading?
+ans. 
+->overloading is the ability to create multiple functions of the same name with different implementations.
+->overloading is done with the help of magic function __call(). This function takes function name and arguments.
+
+5) What Is T_PAAMAYIM_NEKUDOTAYIM (Scope Resolution Operator (::) with Example 
+ans.
+ <?php
+ A
+{
+    public static function A()
+    {
+        echo "meena";
+    }
+}
+A::A();
+?>
+
+6) What are the differences between abstract classes and interfaces? 
+ans.
+  Interface Class:
+->Interface class supports multiple inheritance feature
+->Interface does not contain a data member.
+->The interface does not allow containers.
+->An interface class only contains incomplete members which refer to the signature of the member.
+->Since everything is assumed to be public, an interface class does not have access modifiers by default.
+->Any member of an interface cannot be static.
+
+Abstract Class:
+*Abstract class does not support multiple inheritances.
+*Abstract class does contain a data member.
+*The abstract class supports containers.
+*Abstract class contains both incomplete(i.e. abstract) and complete members.
+*An abstract class can contain access modifiers within subs, functions, and properties.
+*Only a complete member of the abstract class can be static.
+
+
+7)Define Constructor and Destructor? 
+->
+Constructor:
+->A constructor allows you to initialize an object's properties upon creation of the object.
+->If you create a __construct() function, PHP will automatically call this function when you create an object from a class.
+->potice that the construct function starts with two underscores (__)!
+->We see in the example below, that using a constructor saves us from calling the set_name() method which reduces the amount of code
+
+Destructor:
+->A destructor is called when the object is destructed or the script is stopped or exited.
+->If you create a __destruct() function, PHP will automatically call this function at the end of the script.
+->Notice that the destruct function starts with two underscores (__)!
+->The example below has a __construct() function that is automatically called when you create an object from a class, and a __destruct() function that is automatically called at the end of the script
+
+8)How to Load Classes in PHP?
+->"New" 
+
+9) How to Call Parent Constructor? 
+->"parent::__construct "
+
+10) Are Parent Constructor Called Implicitly When Create An ObjectOf Class? 
+-> Parent constructors are not called implicitly if the child class defines a constructor.
+
+11) What Happen, If Constructor Is Defined As Private Or Protected? 
+-> If a constructor is declared as private, then its objects are only accessible from within the declared class. You cannot access its objects from outside the constructor class.
+
+12) What are PHP Magic Methods/Functions? List them Write program for Static Keyword in PHP? 
+->  __construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset(), __unset(), __sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(), __clone(), __debugInfo().
+
+13)Create multiple Traits and use it in to a single class? 
+-> 
+<?php
+trait A
+{
+    public function A()
+    {
+        echo "Hello i am meena"."<br>";
+    }
+}
+ trait B
+ {
+    public function B()
+    {
+        echo "My surname is santoki";
+    }
+ }
+class C
+{
+    use A,B;
+}
+$obj=new C;
+$obj->A();
+$obj->B();
+?>
+
+14)Write PHP Script of Object Iteration? 
+
+15) Use of The $this keyword
+-> this keyword is used inside a class, generally with in the member functions to access non-static members of a class for the current object. this keyword should be preceded with a $ symbol. In case of this operator, we use the -> symbol.
+<?php
+class B
+{
+    public $name="meena";
+    
+    public function m()
+    {
+       echo $this->name;
+                            
+    }
+}
+$x=new B;
+$x->m()
+?>
+
+16) Consider the exercise11and add a edit link near delete link e.g. Clicking up on edit button a particular row should be open in editing mode 
+e.g. on the Particular row there should be filled text box with data and on the option column there should be a confirm button clicking upon it arrow should be updated. 
+
+17) Create Hotel Room Booking System User can book room by 3 ways 
+• Full day 
+• Half day 
+• Custom 
+If user select for the full day than user only have selection for the checking checkout date. If user select Half day than user have option of date and slot option(like user want to book room for first half – Morning (8AM to 6PM) if user select for second halfit‟s for evening (7PM to Morning 7AM)). Do proper validation like if user can book only available slot. (have touse jQuery -> Ajax, validation, Json passing)
+
+
+
+
+                        jquery
+
+1) What is jQuery? 
+->   jQuery is a lightweight, "write less, do more", JavaScript library.
+
+2) How are JavaScript and jQuery different? 
+->  JavaScript is a programming language while jQuery is a library that consists of JavaScript code.
+
+3) Which is the starting point of code execution in jQuery? 
+-> $(document). ready() function
+
+4)Document Load Vs Window. Load() jQuery ?
+-> $(window). load() event is fired after whole content is loaded.
+
+5) What is the difference between prop and attr? 
+-> prop() method provides a way to explicitly retrieve property values, while . attr() retrieves attributes
+
+6) Explain Difference Between JQuery And JavaScript?
+->jQuery is concise and uses fewer lines of code, sometimes only one line of code
+
+7) How We Can Select The Specified <li> Element From The ListOf <li>
+Elements In <ul>?
+->
+ 
+8) In <table> Design Change The Color Of Even <tr> Elements To “green”And Change The Color Of Odd <tr> Elements To “blue” Color? Give An Example Code?
+->
+
+9)How We Can Implement Animation Effects In Jquery?
+->The jQuery animate() method is used to create custom animations.
+
+10) Apply jQuery validation using library.
+->    <form> <input required> </form> 
+      <script src="jquery.js"></script>
+      <script src="jquery.validate.js"></script>
+      <script> 
+      $("form")define(["jquery", "jquery. ...
+      $("#myForm"). ...
+      $("#myform").
+
+11) Create custom dynamic function for require field validator.
+
+
+12) Get state data by country selection (Ajax).
+
+
+13) Image uploading with preview.
